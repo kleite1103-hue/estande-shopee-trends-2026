@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabarito Estande M — Shopee Trends 2026 | Efeito Vendas</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07080a;
+  --panel:#0d0f13;
+  --panel2:#12151b;
+  --line:#1e232c;
+  --orange:#ff4d1c;
+  --purple:#7B2FFF;
+  --txt:#e9ecf1;
+  --mute:#7d8695;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Outfit',sans-serif;font-weight:300;
+  -webkit-font-smoothing:antialiased;line-height:1.55;
+  padding-bottom:80px;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+
+/* HEADER */
+header{
+  border-bottom:1px solid var(--line);
+  padding:34px 0 26px;margin-bottom:26px;
+  background:linear-gradient(180deg,rgba(123,47,255,.10),transparent);
+}
+.eyebrow{
+  font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:12px;
+}
+h1{
+  font-family:'Bebas Neue',sans-serif;font-weight:400;
+  font-size:clamp(38px,8vw,68px);line-height:.92;letter-spacing:.01em;
+}
+h1 span{color:var(--orange)}
+.sub{color:var(--mute);font-size:15px;margin-top:12px;max-width:60ch}
+
+/* ALERTA */
+.alert{
+  border:1px solid var(--orange);border-left-width:4px;
+  background:rgba(255,77,28,.07);
+  padding:16px 18px;border-radius:4px;margin:22px 0;
+  display:flex;gap:14px;align-items:flex-start;
+}
+.alert svg{flex-shrink:0;margin-top:2px}
+.alert b{font-weight:600;color:var(--orange)}
+.alert p{font-size:14px;color:#c9cfd9}
+
+/* SECTIONS */
+section{margin:44px 0}
+h2{
+  font-family:'Bebas Neue',sans-serif;font-weight:400;
+  font-size:clamp(26px,5vw,38px);line-height:1;letter-spacing:.02em;
+  display:flex;align-items:center;gap:12px;margin-bottom:6px;
+}
+h2 .num{
+  font-family:'Space Mono',monospace;font-size:11px;color:var(--orange);
+  border:1px solid var(--orange);border-radius:3px;padding:3px 7px;letter-spacing:.1em;
+}
+.lead{color:var(--mute);font-size:14px;margin-bottom:20px;max-width:70ch}
+
+/* CONTROLES */
+.controls{
+  background:var(--panel);border:1px solid var(--line);border-radius:6px;
+  padding:18px;margin-bottom:18px;
+}
+.ctl-title{
+  font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--mute);margin-bottom:14px;
+}
+.seg{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.seg button{
+  flex:1;min-width:120px;background:var(--panel2);border:1px solid var(--line);
+  color:var(--mute);font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;
+  padding:11px 10px;border-radius:4px;cursor:pointer;transition:.15s;
+}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#fff}
+.seg button:focus-visible{outline:2px solid var(--purple);outline-offset:2px}
+
+.grid-in{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.field label{
+  display:block;font-family:'Space Mono',monospace;font-size:10px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:6px;
+}
+.field input{
+  width:100%;background:var(--bg);border:1px solid var(--line);color:var(--txt);
+  font-family:'Space Mono',monospace;font-size:14px;padding:10px;border-radius:4px;
+}
+.field input:focus{outline:none;border-color:var(--orange)}
+
+.layers{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.layers label{display:flex;align-items:center;gap:7px;font-size:13px;cursor:pointer;color:#c9cfd9}
+.layers input{accent-color:var(--orange);width:16px;height:16px}
+
+/* CANVAS */
+.canvas{
+  background:var(--panel);border:1px solid var(--line);border-radius:6px;
+  padding:14px;overflow-x:auto;
+}
+.canvas svg{width:100%;height:auto;display:block;min-width:320px}
+
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:12px;color:var(--mute)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+
+/* TABELA */
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+th{
+  font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--orange);text-align:left;
+  padding:10px 12px;border-bottom:1px solid var(--line);font-weight:400;
+}
+td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:#c9cfd9}
+td b{color:var(--txt);font-weight:600}
+.tw{overflow-x:auto}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px;
+  border-top:3px solid var(--orange);
+}
+.card.p{border-top-color:var(--purple)}
+.card h3{
+  font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:20px;
+  letter-spacing:.03em;margin-bottom:8px;
+}
+.card p{font-size:13.5px;color:var(--mute)}
+.card .val{
+  font-family:'Space Mono',monospace;font-size:13px;color:var(--orange);
+  display:block;margin-top:10px;
+}
+
+/* CHECKLIST */
+.check{list-style:none}
+.check li{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:13px 0;border-bottom:1px solid var(--line);font-size:14px;color:#c9cfd9;
+}
+.check li b{color:var(--txt);font-weight:600}
+.chk{
+  flex-shrink:0;width:18px;height:18px;border:1px solid var(--orange);
+  border-radius:3px;margin-top:2px;
+}
+
+/* BOTAO */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--orange);color:#fff;border:none;
+  font-family:'Outfit',sans-serif;font-weight:600;font-size:14px;
+  padding:14px 22px;border-radius:4px;cursor:pointer;transition:.15s;
+  text-decoration:none;
+}
+.btn:hover{background:#ff3d08}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--txt)}
+.btn:focus-visible{outline:2px solid var(--purple);outline-offset:2px}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+
+/* CONCEITO */
+.concept{
+  background:linear-gradient(135deg,rgba(123,47,255,.12),rgba(255,77,28,.06));
+  border:1px solid var(--line);border-radius:6px;padding:22px;
+}
+.concept h3{
+  font-family:'Bebas Neue',sans-serif;font-size:24px;font-weight:400;
+  letter-spacing:.03em;margin-bottom:10px;
+}
+.concept p{font-size:14.5px;color:#c9cfd9;margin-bottom:10px}
+.concept strong{color:var(--orange);font-weight:600}
+
+footer{
+  border-top:1px solid var(--line);margin-top:56px;padding-top:22px;
+  font-family:'Space Mono',monospace;font-size:11px;color:var(--mute);
+  letter-spacing:.08em;
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+  <div class="eyebrow">Gabarito Técnico · Estande M · 2,50 × 4,00 m</div>
+  <h1>Shopee Trends 2026<br><span>Efeito Vendas</span></h1>
+  <p class="sub">Mapa de zonas em escala para diagramação da lona, placa lateral e peças de balcão. Todas as medidas em centímetros, na escala real do manual do expositor.</p>
+</div>
+</header>
+
+<div class="wrap">
+
+<div class="alert">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff4d1c" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+  <p><b>Prazo original do manual: 17/07.</b> Envio combinado até segunda-feira. Confirmar por escrito com o CAEX que a arte entra sem custo extra e sem risco de qualidade de impressão — pedir confirmação por e-mail, não por telefone.</p>
+</div>
+
+<!-- ITEM 01 -->
+<section>
+  <h2><span class="num">Item 01</span> Lona frontal</h2>
+  <p class="lead">Área visual 250 × 200 cm. Arquivo final 280 × 230 cm com 15 cm de sangria por lado. A TV e as três prateleiras são estruturas fixas do estande — a arte precisa ser desenhada em volta delas.</p>
+
+  <div class="controls">
+    <div class="ctl-title">Posição do estande no evento</div>
+    <div class="seg">
+      <button id="bDir" class="on" onclick="setSide('dir')">Lado direito · TV à direita</button>
+      <button id="bEsq" onclick="setSide('esq')">Lado esquerdo · TV à esquerda</button>
+    </div>
+
+    <div class="ctl-title">Medidas a confirmar com o CAEX</div>
+    <div class="grid-in">
+      <div class="field">
+        <label>TV — margem da borda (cm)</label>
+        <input type="number" id="tvM" value="20" min="0" max="100">
+      </div>
+      <div class="field">
+        <label>Prateleira 1 — altura (cm)</label>
+        <input type="number" id="p1" value="120" min="0" max="200">
+      </div>
+      <div class="field">
+        <label>Prateleira 2 — altura (cm)</label>
+        <input type="number" id="p2" value="152" min="0" max="200">
+      </div>
+      <div class="field">
+        <label>Prateleira 3 — altura (cm)</label>
+        <input type="number" id="p3" value="184" min="0" max="200">
+      </div>
+      <div class="field">
+        <label>Prateleira — largura (cm)</label>
+        <input type="number" id="pW" value="100" min="20" max="200">
+      </div>
+      <div class="field">
+        <label>Balcão — altura de bloqueio (cm)</label>
+        <input type="number" id="balH" value="100" min="0" max="180">
+      </div>
+    </div>
+
+    <div class="layers">
+      <label><input type="checkbox" id="lZ" checked> Zonas de leitura</label>
+      <label><input type="checkbox" id="lC" checked> Conceito cofre</label>
+      <label><input type="checkbox" id="lM" checked> Cotas</label>
+      <label><input type="checkbox" id="lS" checked> Sangria</label>
+    </div>
+  </div>
+
+  <div class="canvas" id="cv"></div>
+
+  <div class="legend">
+    <span><i style="background:#ff4d1c"></i>Obstáculo fixo</span>
+    <span><i style="background:#7B2FFF"></i>Zona de titulo</span>
+    <span><i style="background:#2a3340"></i>Zona morta</span>
+    <span><i style="background:transparent;border:1px dashed #ff4d1c"></i>Sangria — sem informação</span>
+  </div>
+
+  <div class="btnrow">
+    <button class="btn" onclick="baixarSVG()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+      Baixar gabarito SVG em escala 1:1
+    </button>
+    <button class="btn ghost" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
+      Imprimir esta página
+    </button>
+  </div>
+</section>
+
+<!-- CONCEITO -->
+<section>
+  <h2><span class="num">Conceito</span> O obstáculo é o cofre</h2>
+  <div class="concept">
+    <h3>A TV é a porta. As prateleiras são o interior.</h3>
+    <p>Em vez de esconder a TV e as prateleiras, a arte as incorpora. <strong>Ao redor do recorte da TV</strong> imprime-se a porta circular do cofre — volante, dobradiças, pinos de travamento, chapa com profundidade. A TV ligada é o que existe dentro do cofre: a Seller.IA rodando análise de conta real, em loop.</p>
+    <p><strong>No lado das prateleiras</strong>, a lona traz o interior metálico do cofre com luz vazando. As prateleiras deixam de ser um estorvo e viram as prateleiras do cofre — ali vão os objetos físicos: cartões-chave, brindes, produtos de clientes.</p>
+    <p>A metáfora se resolve sem texto. Quem passa entende sozinho: o cofre está aberto e o que estava trancado dentro é inteligência de dados.</p>
+  </div>
+</section>
+
+<!-- ZONAS -->
+<section>
+  <h2><span class="num">Zonas</span> O que vai em cada faixa</h2>
+  <p class="lead">A lona tem 200 cm de altura. Com a TV entre 130 e 186 cm, a faixa livre no topo é de apenas 14 cm. Isso muda a hierarquia: o título precisa ser horizontal e curto.</p>
+  <div class="tw">
+  <table>
+    <tr><th>Faixa</th><th>Altura</th><th>Situação</th><th>O que colocar</th></tr>
+    <tr><td><b>Topo</b></td><td>186–200 cm</td><td>Livre em toda a largura</td><td>Título curto em caixa alta. Altura de letra 9–11 cm, legível a 10 m. Sugestão: <b>QUER A CHAVE?</b></td></tr>
+    <tr><td><b>TV</b></td><td>130–186 cm</td><td>97 × 56 cm ocupados</td><td>Porta do cofre impressa em volta. Nenhum texto dentro do raio da moldura</td></tr>
+    <tr><td><b>Prateleiras</b></td><td>a confirmar</td><td>3 linhas no lado oposto à TV</td><td>Interior metálico do cofre. Texto só nos vãos entre prateleiras, se houver 25 cm ou mais</td></tr>
+    <tr><td><b>Meio livre</b></td><td>100–130 cm</td><td>Visível para quem parou</td><td>Bloco Seller.IA e selo Consultoria Certificada</td></tr>
+    <tr><td><b>Zona morta</b></td><td>0–100 cm</td><td>Balcão, banqueta e pessoas</td><td>Só textura de cofre. Zero informação</td></tr>
+    <tr><td><b>Sangria</b></td><td>15 cm por lado</td><td>Desaparece na dobra</td><td>Extensão da textura. Nada legível</td></tr>
+  </table>
+  </div>
+</section>
+
+<!-- ITEM 04 -->
+<section>
+  <h2><span class="num">Item 04</span> Placa lateral</h2>
+  <p class="lead">Área visual 35 × 60 cm em adesivo impresso, fundo branco, aplicado sobre a coluna de topo curvo. É a peça perpendicular ao corredor — o que puxa gente de 15 metros. Espelhada conforme o lado do estande.</p>
+  <div class="canvas" id="cv4"></div>
+  <div class="cards" style="margin-top:16px">
+    <div class="card">
+      <h3>Não é peça de informação</h3>
+      <p>Ninguém lê texto corrido de lado, andando. Logo Efeito Vendas, uma linha vertical em caixa alta e nada mais.</p>
+      <span class="val">A CHAVE DA SUA LOJA</span>
+    </div>
+    <div class="card p">
+      <h3>Contraste é tudo</h3>
+      <p>Fundo #07080a com laranja #ff4d1c. Contra as paredes laranja claro do evento, o preto é o que destaca o estande de vocês.</p>
+      <span class="val">#07080a / #ff4d1c</span>
+    </div>
+  </div>
+</section>
+
+<!-- ITENS 02 03 -->
+<section>
+  <h2><span class="num">Itens 02 / 03</span> Logotipos em recorte</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Item 02 — Logo frente</h3>
+      <p>PS 1 mm recorte. Proporção 50 × 15 cm, bem próxima do lockup horizontal Efeito Vendas. Entregar em vetor com o triângulo roxo como caminho fechado.</p>
+      <span class="val">50 × 15 cm · vetor</span>
+    </div>
+    <div class="card">
+      <h3>Item 03 — Logo balcão</h3>
+      <p>PS 1 mm recorte adesivado, 60 cm de largura. Frente do balcão. O QR Code vai em peça própria, colada abaixo, mais o acrílico em pé no tampo.</p>
+      <span class="val">60 cm × proporção · vetor</span>
+    </div>
+    <div class="card p">
+      <h3>Peça própria — QR</h3>
+      <p>Fora do escopo do CAEX. Adesivo 20 × 20 cm na frente do balcão entre 100 e 130 cm de altura, mais display de acrílico A5 no tampo.</p>
+      <span class="val">utm_campaign=shopee_trends_2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ARQUIVOS -->
+<section>
+  <h2><span class="num">Envio</span> Especificação de arquivo</h2>
+  <div class="tw">
+  <table>
+    <tr><th>Item</th><th>Área visual</th><th>Arquivo final</th><th>Formato</th></tr>
+    <tr><td><b>01 Lona</b></td><td>250 × 200 cm</td><td>280 × 230 cm</td><td>.pdf ou .jpg · CMYK · 100 dpi no tamanho final</td></tr>
+    <tr><td><b>02 Logo frente</b></td><td>50 × 15 cm</td><td>vetor</td><td>.pdf / .ai / .cdr X8</td></tr>
+    <tr><td><b>03 Logo balcão</b></td><td>60 cm × proporção</td><td>vetor</td><td>.pdf / .ai / .cdr X8</td></tr>
+    <tr><td><b>04 Placa lateral</b></td><td>35 × 60 cm</td><td>+ sangria a confirmar</td><td>.pdf ou .jpg · CMYK · 150 dpi</td></tr>
+  </table>
+  </div>
+  <div class="cards" style="margin-top:18px">
+    <div class="card">
+      <h3>Regras rígidas</h3>
+      <p>Salvar em CMYK. Não deixar marcas de corte no arquivo. Nunca enviar TIFF.</p>
+    </div>
+    <div class="card">
+      <h3>Nomenclatura</h3>
+      <p>Número do item, material, tamanho e quantidade.</p>
+      <span class="val">Item01_LonaImpressa_280x230cm_1x</span>
+    </div>
+    <div class="card p">
+      <h3>Truque de peso de arquivo</h3>
+      <p>Monte a lona a 50% — 140 × 115 cm a 200 dpi. Equivale a 100 dpi no tamanho final. Indique no e-mail que está a 50%.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST CAEX -->
+<section>
+  <h2><span class="num">Bloqueio</span> Confirmar com o CAEX hoje</h2>
+  <p class="lead">Sem estas respostas o designer diagrama no escuro. Manda tudo num e-mail só e pede resposta item por item.</p>
+  <ul class="check">
+    <li><span class="chk"></span><span><b>Prazo.</b> A arte enviada na segunda entra sem custo extra e sem perda de qualidade de impressão?</span></li>
+    <li><span class="chk"></span><span><b>Lado do estande.</b> Esquerdo ou direito? Itens 01 e 04 são espelhados — errar isso inutiliza as duas peças.</span></li>
+    <li><span class="chk"></span><span><b>Prateleiras.</b> Altura de cada uma a partir do piso, largura e profundidade. O desenho técnico não cota isso.</span></li>
+    <li><span class="chk"></span><span><b>TV.</b> Distância horizontal do recorte até a borda da lona.</span></li>
+    <li><span class="chk"></span><span><b>Altura de montagem da lona.</b> Ela começa no piso ou existe rodapé? Isso desloca todas as cotas verticais.</span></li>
+    <li><span class="chk"></span><span><b>Sangria do adesivo.</b> A Figura Item 04 indica 5 cm por lado, a página de informações indica 2 cm. Qual vale?</span></li>
+    <li><span class="chk"></span><span><b>Resolução.</b> O Item 01 indica 150 dpi, a página final indica 60 a 100 dpi para lona. Qual vale?</span></li>
+    <li><span class="chk"></span><span><b>Peças próprias.</b> Podemos aplicar adesivo nosso no balcão e usar display de acrílico no tampo?</span></li>
+    <li><span class="chk"></span><span><b>Volume.</b> Podemos sobrepor um recorte físico à lona, ou a parede tem que ficar plana?</span></li>
+  </ul>
+</section>
+
+<!-- OPERACAO -->
+<section>
+  <h2><span class="num">Operação</span> O que quebra no dia</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Um ponto de energia</h3>
+      <p>A TV consome ele inteiro. Levar régua com 4 tomadas e extensão de 5 m própria.</p>
+    </div>
+    <div class="card">
+      <h3>A TV é display burro</h3>
+      <p>Levar HDMI, adaptador USB-C para HDMI e o vídeo em pendrive MP4 H.264 1080p. Testar se a TV lê USB. Plano B: notebook conectado.</p>
+    </div>
+    <div class="card">
+      <h3>Vídeo sem áudio</h3>
+      <p>Pavilhão é barulhento. Legenda queimada, loop de 45 a 60 segundos. Ninguém assiste mais que isso em pé.</p>
+    </div>
+    <div class="card p">
+      <h3>Uma banqueta para dois</h3>
+      <p>Combinar revezamento antes. Quem está em pé é quem aborda. Estande com as duas pessoas sentadas não recebe visita.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>EFEITO VENDAS · GABARITO INTERNO · SHOPEE TRENDS 2026 · MEDIDAS EM CENTÍMETROS</div>
+</footer>
+</div>
+
+<script>
+var side='dir';
+var W=280,H=230,VX=15,VY=15,VW=250,VH=200;
+var TVW=97,TVH=56,TVBASE=130;
+
+function g(id){return document.getElementById(id)}
+function n(id,d){var v=parseFloat(g(id).value);return isNaN(v)?d:v}
+
+function setSide(s){
+  side=s;
+  g('bDir').className = s==='dir'?'on':'';
+  g('bEsq').className = s==='esq'?'on':'';
+  draw();
+}
+
+function build(exp){
+  var tvM=n('tvM',20), pW=n('pW',100), balH=n('balH',100);
+  var ph=[n('p1',120),n('p2',152),n('p3',184)];
+  var zZ=g('lZ').checked, zC=g('lC').checked, zM=g('lM').checked, zS=g('lS').checked;
+  if(exp){zZ=true;zM=true;zS=true;zC=false}
+
+  var y=function(h){return VY+VH-h};           // altura do piso -> coord SVG
+  var tvX = side==='dir' ? (VX+VW-tvM-TVW) : (VX+tvM);
+  var tvY = y(TVBASE+TVH);
+  var prX = side==='dir' ? VX : (VX+VW-pW);
+  var cofX = tvX+TVW/2, cofY = tvY+TVH/2, cofR = 78;
+
+  var s='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+W+' '+H+'"'+
+    (exp?' width="'+W+'cm" height="'+H+'cm"':'')+' font-family="monospace">';
+
+  s+='<rect width="'+W+'" height="'+H+'" fill="#0d0f13"/>';
+
+  // sangria
+  if(zS){
+    s+='<rect x="0" y="0" width="'+W+'" height="'+H+'" fill="#1a0e0a"/>';
+    s+='<text x="6" y="9" fill="#ff4d1c" font-size="5">SANGRIA 15cm — SEM INFORMACAO</text>';
+  }
+
+  // area visual
+  s+='<rect x="'+VX+'" y="'+VY+'" width="'+VW+'" height="'+VH+'" fill="#0f1218" stroke="#ff4d1c" stroke-width="0.8"/>';
+
+  // conceito cofre
+  if(zC){
+    s+='<defs><radialGradient id="gc"><stop offset="0%" stop-color="#7B2FFF" stop-opacity="0.30"/><stop offset="100%" stop-color="#7B2FFF" stop-opacity="0"/></radialGradient></defs>';
+    s+='<circle cx="'+cofX+'" cy="'+cofY+'" r="'+cofR+'" fill="url(#gc)"/>';
+    for(var r=cofR;r>TVW/2;r-=13){
+      s+='<circle cx="'+cofX+'" cy="'+cofY+'" r="'+r+'" fill="none" stroke="#7B2FFF" stroke-width="0.5" stroke-opacity="0.55"/>';
+    }
+    s+='<text x="'+cofX+'" y="'+(cofY+cofR+9)+'" fill="#7B2FFF" font-size="5.5" text-anchor="middle">PORTA DO COFRE IMPRESSA NA LONA</text>';
+  }
+
+  // zona morta
+  if(zZ){
+    s+='<rect x="'+VX+'" y="'+y(balH)+'" width="'+VW+'" height="'+balH+'" fill="#2a3340" fill-opacity="0.55"/>';
+    s+='<text x="'+(VX+6)+'" y="'+(y(balH)+11)+'" fill="#8b95a5" font-size="6">ZONA MORTA 0–'+balH+'cm · BALCAO E PESSOAS · SEM INFORMACAO</text>';
+    // faixa titulo
+    var tTop=VY, tH=y(TVBASE+TVH)-VY;
+    if(tH>2){
+      s+='<rect x="'+VX+'" y="'+tTop+'" width="'+VW+'" height="'+tH+'" fill="#7B2FFF" fill-opacity="0.30"/>';
+      s+='<text x="'+(VX+6)+'" y="'+(tTop+tH/2+2.5)+'" fill="#c9a8ff" font-size="6">FAIXA DE TITULO · '+(TVBASE+TVH)+'–'+VH+'cm · ALTURA UTIL '+tH.toFixed(0)+'cm</text>';
+    }
+    // meio livre
+    var mTop=y(TVBASE), mH=TVBASE-balH;
+    if(mH>2){
+      s+='<rect x="'+VX+'" y="'+mTop+'" width="'+VW+'" height="'+mH+'" fill="#ff4d1c" fill-opacity="0.10"/>';
+      s+='<text x="'+(VX+6)+'" y="'+(mTop+mH/2+2.5)+'" fill="#ffb098" font-size="6">FAIXA LIVRE '+balH+'–'+TVBASE+'cm · SELLER.IA E SELO</text>';
+    }
+  }
+
+  // TV
+  s+='<rect x="'+tvX+'" y="'+tvY+'" width="'+TVW+'" height="'+TVH+'" fill="#000" stroke="#ff4d1c" stroke-width="1"/>';
+  s+='<text x="'+(tvX+TVW/2)+'" y="'+(tvY+TVH/2-2)+'" fill="#ff4d1c" font-size="9" text-anchor="middle">TV 43"</text>';
+  s+='<text x="'+(tvX+TVW/2)+'" y="'+(tvY+TVH/2+7)+'" fill="#7d8695" font-size="5.5" text-anchor="middle">97 × 56 cm · base '+TVBASE+'cm</text>';
+
+  // prateleiras
+  for(var i=0;i<3;i++){
+    var py=y(ph[i]);
+    s+='<rect x="'+prX+'" y="'+(py-1.4)+'" width="'+pW+'" height="2.8" fill="#ff4d1c" fill-opacity="0.85"/>';
+    var lx = side==='dir' ? (prX+pW+3) : (prX-3);
+    var an = side==='dir' ? 'start':'end';
+    s+='<text x="'+lx+'" y="'+(py+2)+'" fill="#ff4d1c" font-size="5">P'+(i+1)+' '+ph[i]+'cm</text>';
+  }
+
+  // cotas
+  if(zM){
+    s+='<line x1="'+VX+'" y1="'+(VY-5)+'" x2="'+(VX+VW)+'" y2="'+(VY-5)+'" stroke="#7d8695" stroke-width="0.4"/>';
+    s+='<text x="'+(VX+VW/2)+'" y="'+(VY-7)+'" fill="#7d8695" font-size="6" text-anchor="middle">250 cm — area visual</text>';
+    s+='<line x1="'+(VX+VW+5)+'" y1="'+VY+'" x2="'+(VX+VW+5)+'" y2="'+(VY+VH)+'" stroke="#7d8695" stroke-width="0.4"/>';
+    s+='<text x="'+(VX+VW+8)+'" y="'+(VY+VH/2)+'" fill="#7d8695" font-size="6" transform="rotate(90 '+(VX+VW+8)+' '+(VY+VH/2)+')" text-anchor="middle">200 cm</text>';
+    s+='<line x1="'+VX+'" y1="'+y(TVBASE)+'" x2="'+(VX+VW)+'" y2="'+y(TVBASE)+'" stroke="#ff4d1c" stroke-width="0.3" stroke-dasharray="3 3"/>';
+    s+='<line x1="'+VX+'" y1="'+y(TVBASE+TVH)+'" x2="'+(VX+VW)+'" y2="'+y(TVBASE+TVH)+'" stroke="#ff4d1c" stroke-width="0.3" stroke-dasharray="3 3"/>';
+    s+='<text x="'+(W-6)+'" y="'+(H-6)+'" fill="#7d8695" font-size="5" text-anchor="end">ITEM 01 · LADO '+(side==='dir'?'DIREITO':'ESQUERDO')+' · 280×230cm com sangria</text>';
+  }
+
+  s+='</svg>';
+  return s;
+}
+
+function build4(){
+  var w=45,h=95;
+  var s='<svg viewBox="0 0 '+w+' '+h+'" font-family="monospace">';
+  s+='<rect width="'+w+'" height="'+h+'" fill="#0d0f13"/>';
+  // placa com topo curvo
+  s+='<path d="M5 '+(h-3)+' L5 25 Q5 3 27 3 L40 3 L40 '+(h-3)+' Z" fill="#fff" stroke="#1e232c" stroke-width="0.5"/>';
+  // area visual 35x60 posicionada na parte alta
+  s+='<rect x="5" y="18" width="35" height="60" fill="#ff4d1c" fill-opacity="0.25" stroke="#ff4d1c" stroke-width="0.6"/>';
+  s+='<text x="22.5" y="45" fill="#ff4d1c" font-size="3.4" text-anchor="middle">AREA VISUAL</text>';
+  s+='<text x="22.5" y="50" fill="#ff4d1c" font-size="3.4" text-anchor="middle">35 × 60 cm</text>';
+  s+='<text x="22.5" y="'+(h-6)+'" fill="#7d8695" font-size="3" text-anchor="middle">fundo branco</text>';
+  s+='<text x="22.5" y="12" fill="#7d8695" font-size="3" text-anchor="middle">topo curvo — nada de texto aqui</text>';
+  s+='</svg>';
+  return s;
+}
+
+function draw(){ g('cv').innerHTML=build(false); }
+
+function baixarSVG(){
+  var blob=new Blob([build(true)],{type:'image/svg+xml'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='Item01_Gabarito_280x230cm_lado-'+side+'.svg';
+  a.click();
+}
+
+['tvM','p1','p2','p3','pW','balH'].forEach(function(id){g(id).addEventListener('input',draw)});
+['lZ','lC','lM','lS'].forEach(function(id){g(id).addEventListener('change',draw)});
+
+draw();
+g('cv4').innerHTML=build4();
+</script>
+</body>
+</html>
